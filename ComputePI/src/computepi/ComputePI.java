@@ -20,12 +20,12 @@ public class ComputePI {
     public static void main(String[] args) {
         
         final int FIRST_ITERATION = 1;
+        final double EXPECTED_VALUE = 3.141593;
+        final double DELTA = 0.0000004;
+        
         int iterationCount = 0;        
         double numberToBeDividedBy = 1.0;
         double computedValue = 0.0;
-        
-        final double EXPECTED_VALUE = 3.141593;
-        final double DELTA = 0.0000004;
         
         boolean continueToIterate = true;
 
