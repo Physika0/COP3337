@@ -14,22 +14,20 @@ import java.lang.Math;
 public class ComputePI {
 
     /**
+     * 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        final int DECIMAL_PLACE = 8;
         final int FIRST_ITERATION = 1;
         int iterationCount = 0;        
         double numberToBeDividedBy = 1.0;
         double computedValue = 0.0;
         
-        final String EXPECTED_VALUE = 
-            Double.toString(Math.PI).substring(0, DECIMAL_PLACE);
+        final double EXPECTED_VALUE = 3.141593;
+        final double DELTA = 0.0000004;
         
-        String computedValueToString;
-        
-        boolean continueToIterate = true;       
+        boolean continueToIterate = true;
 
         while(continueToIterate)
         {            
@@ -51,17 +49,14 @@ public class ComputePI {
             
             numberToBeDividedBy += 2;
             
-            computedValueToString = Double.toString(computedValue);
-            
             if (iterationCount > FIRST_ITERATION)
             {
                 
-                if (computedValueToString.substring(0, DECIMAL_PLACE)
-                    .equals(EXPECTED_VALUE))
+                if (Math.abs(EXPECTED_VALUE - computedValue) < DELTA)
                 {
-                
-                continueToIterate = false;
-                
+                    
+                    continueToIterate = false;
+                    
                 }
                 
             }
