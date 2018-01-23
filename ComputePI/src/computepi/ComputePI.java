@@ -14,7 +14,8 @@ import java.lang.Math;
 public class ComputePI {
 
     /**
-     * 
+     * The main method encompasses the means to compute PI to a certain level
+     * of accuracy, namely up to six decimal places. 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
