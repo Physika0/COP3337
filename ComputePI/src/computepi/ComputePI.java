@@ -18,8 +18,9 @@ public class ComputePI {
      */
     public static void main(String[] args) {
         
-        final int DECIMAL_PLACE = 7;
-        int iterationCount = 0;
+        final int DECIMAL_PLACE = 8;
+        final int FIRST_ITERATION = 1;
+        int iterationCount = 0;        
         double numberToBeDividedBy = 1.0;
         double computedValue = 0.0;
         
@@ -52,7 +53,7 @@ public class ComputePI {
             
             computedValueToString = Double.toString(computedValue);
             
-            if (iterationCount > 1)
+            if (iterationCount > FIRST_ITERATION)
             {
                 
                 if (computedValueToString.substring(0, DECIMAL_PLACE)
@@ -72,7 +73,7 @@ public class ComputePI {
             
         }
         
-        //FIXME: Output has the wrong decimal place, should be 4
+        
         System.out.println("Expected Value: " + EXPECTED_VALUE);
         System.out.println("Computed Value: " + computedValue);
         System.out.println("Required Iterations: " + iterationCount);
