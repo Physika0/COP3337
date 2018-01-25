@@ -14,7 +14,7 @@
 |	______________________________________ [Signature]
 |  
 |     Language:  Java 
-|  Compile/Run:  [How to Compile and Execute this program, IN DETAIL.] 
+|  Compile/Run:   
 | 	javac ComputePI.java
 |	java ComputePI
 | 
@@ -69,8 +69,8 @@ package computepi;
 import java.lang.Math;
 
 /**
- *
- * @author npabon11
+ * This class has the main method which computes PI using the Leibniz formula.
+ * @author Nathan Pabon
  */
 public class ComputePI {
 
@@ -81,13 +81,24 @@ public class ComputePI {
      */
     public static void main(String[] args) {
         
-        final double EXPECTED_VALUE = 3.141593;
-        final double DELTA = 0.0000004;
+        /*The expected value used to determine the delta of the expected value 
+          and computed value. Printed at the end.*/
+        final double EXPECTED_VALUE = 3.141593; 
         
-        int iterationCount = 0;        
+        /*Delta constant is the difference between 3.1415926 and the expected
+          value, this determines the most  meaninful difference. Used to 
+          determine when to stop computation.*/
+        final double DELTA = 0.0000004; 
+        
+        /*Counts the number of iterations in the loop.*/
+        int iterationCount = 0; 
+        
+        /*Number to be divided by for the computation.*/
         double numberToBeDividedBy = 1.0;
-        double computedValue = 0.0;
         
+        double computedValue = 0.0; /*Computed value of PI */
+        
+        /*Keeps the loop iterating until false.*/
         boolean continueToIterate = true;
 
         while(continueToIterate)
@@ -95,6 +106,8 @@ public class ComputePI {
             
             iterationCount++;
             
+            /*Checks if the iteration is odd to alternate between addition and
+              subtraction.*/
             if (iterationCount % 2 == 1)
             {
                 
@@ -108,8 +121,13 @@ public class ComputePI {
                 
             }
             
+            /*This value increases by two with each loop so that the 
+              computations above occur with only odd numbers starting from 1.0*/
             numberToBeDividedBy += 2;
-                
+            
+            /*Checks if the absolute value of the difference is less than
+              the DELTA constant 0.0000004, so that the program knows when to
+              stop as soon as the desired computed value is reached.*/
             if (Math.abs(EXPECTED_VALUE - computedValue) < DELTA)
             {
                     
