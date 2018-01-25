@@ -134,10 +134,7 @@ public class ComputePI {
                 continueToIterate = false;
                     
             }
-            
-            //FIXME: Printing for testing purposes, DELETE later
-            System.out.println(computedValue);
-            
+                        
         }
         
         
