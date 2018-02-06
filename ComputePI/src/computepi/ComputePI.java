@@ -20,7 +20,7 @@
 | 
 |  +----------------------------------------------------------------------------  
 |  
-|  Description:  The progam's purpose is to compute PI utilizing the Leibniz    
+|  Description:  The program's purpose is to compute PI utilizing the Leibniz    
 |                formula which can be found on page 29 in the book Big Java, 
 |                Early Objects by Cay Horstmann. The program will calculate this 
 |                up to the sixth decimal place. The formula is as follows:
@@ -37,7 +37,8 @@
 |  
 |      Process:  The program goes through the following steps:
 |                
-|                1. The first iteration is counted before any compution occurs.
+|                1. The first iteration is counted before any computation 
+|                   occurs.
 |
 |                2. It then checks if the iteration number is odd so that it may
 |                   alternate between subtracting or adding to the computed 
@@ -66,19 +67,17 @@
 
 package computepi;
 
+//Library imported for the abs() method to find the absolute value.
 import java.lang.Math;
 
 /**
  * This class has the main method which computes PI using the Leibniz formula.
+ * It computes PI up to a certain level of accuracy.
  * @author Nathan Pabon
+ * @version 1.0
  */
 public class ComputePI {
-
-    /**
-     * The main method encompasses the means to compute PI to a certain level
-     * of accuracy, namely up to six decimal places. 
-     * @param args the command line arguments
-     */
+        
     public static void main(String[] args) {
         
         /*The expected value used to determine the delta of the expected value 
@@ -86,7 +85,7 @@ public class ComputePI {
         final double EXPECTED_VALUE = 3.141593; 
         
         /*Delta constant is the difference between 3.1415926 and the expected
-          value, this determines the most  meaninful difference. Used to 
+          value, this determines the most  meaningful difference. Used to 
           determine when to stop computation.*/
         final double DELTA = 0.0000004; 
         
@@ -134,14 +133,12 @@ public class ComputePI {
                 continueToIterate = false;
                     
             }
-                        
-        }
-        
+            
+        }        
         
         System.out.println("Expected Value: " + EXPECTED_VALUE);
         System.out.println("Computed Value: " + computedValue);
         System.out.println("Required Iterations: " + iterationCount);
         
-    }
-    
+    }    
 }
