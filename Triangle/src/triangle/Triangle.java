@@ -3,14 +3,14 @@
 |
 |         Class: Triangle 
 |
-|        Author:  Good Student
-|    Student ID:  0000000
-|    Assignment:  Program #0 - Fat Content
+|        Author:  
+|    Student ID:  
+|    Assignment:  Program #2 - Triangle
 |  
-|        Course:  COP 3337 (Intermediate Programming)
-|       Section:  U00
-|    Instructor:  William Feild  
-|      Due Date:  1 January 2000, by the end of class 
+|        Course:  COP 3337 (Programming II)
+|       Section:  
+|    Instructor:    
+|      Due Date:  6 February 2018, at the beginning of class 
 |
 |	I hereby certify that this collective work is my own
 |	and none of it is the work of any other person or entity.
@@ -19,17 +19,24 @@
 |        Language:  Java
 |  Compile/Run: 
 |
+|	Assuming you only want to compile the Triangle class
+|
 | 	javac Triangle.java
 |	java Triangle
 |
+|	Otherwise
+|	
+|	javac TriangleTester.java Triangle.java
+|	java Triangle
+|
 |        Purpose:  The purpose of this class is to retain information regarding
-                   the points the user inputs from a tester to create a 
-                   triangle. This information is then used to perform several
-                   tasks should the specific method be called. Tasks performed 
-                   by the methods include setting points, getting point 
-                   coordinates, getting side lengths, getting angles, getting
-                   perimeter, getting area, and determining whether it is an 
-                   equlateral triangle, right triangle, or neither.
+|                  the points the user inputs from a tester to create a 
+|                  triangle. This information is then used to perform several
+|                  tasks should the specific method be called. Tasks performed 
+|                  by the methods include setting points, getting point 
+|                  coordinates, getting side lengths, getting angles, getting
+|                  perimeter, getting area, and determining whether it is an 
+|                  equilateral triangle, right triangle, or neither.
 |
 |  Inherits From:  None
 |
@@ -38,14 +45,14 @@
 | +-----------------------------------------------------------------------
 |
 |      Constants:  The only constants in the class are initialized only when
-                   isRightAngled() method is called as it is the only method
-                   which requires the usage of the constants. R
-                   IGHT_ANGLE_DEGREE is the degree at which the right 
-                   angle is defined, specifically 90 degress. The DELTA constant
-                   is used to determine the value of an angle is close enough
-                   to be considered a whole numbered angle, spefically used to
-                   determine if an angle is close enough to be considered 90
-                   degrees even if it may be 89.9999 degrees.
+|                  isRightAngled() method is called as it is the only method
+|                  which requires the usage of the constants. R
+|                  IGHT_ANGLE_DEGREE is the degree at which the right 
+|                  angle is defined, specifically 90 degrees. The DELTA constant
+|                  is used to determine the value of an angle is close enough
+|                  to be considered a whole numbered angle, specifically used to
+|                  determine if an angle is close enough to be considered 90
+|                  degrees even if it may be 89.9999 degrees.
 |
 | +-----------------------------------------------------------------------
 |
@@ -54,48 +61,48 @@
 |  Class Methods:  None
 |
 |  Instance Methods:  
-                        1. setPoint1(double x, double y), no return
-                        2. setPoint2(double x, double y), no return
-                        3. setPoint3(double x, double y), no return
-                        4. getPoint1X(), returns double
-                        5. getPoint1Y(), returns double
-                        6. getPoint2X(), returns double
-                        7. getPoint2Y(), returns double
-                        8. getPoint3X(), returns double
-                        9. getPoint3Y(), returns double
-                       10. getSide1(), returns double
-                       11. getSide2(), returns double
-                       12. getSide3(), returns double
-                       13. getAngle1(), returns double
-                       14. getAngle2(), returns double
-                       15. getAngle3(), returns double
-                       16. getPerimeter(), returns double
-                       17. getArea(), returns double
-                       18. isEquilateral, returns boolean
-                       19. isRightAngled, returns boolean
-
-  +-----------------------------------------------------------------------
-    
-    Formulas Used:
-                    The methods getAngle1(), getAngle2(), and getAngle3()
-                    all utilize the Law of Cosines to determine the angles.
-
-                    cos(C) = (a^2 + b^2 − c^2) / (2*a*b)
-                    cos(A) = (b^2 + c^2 − a^2) / (2*b*c)
-                    cos(B) = (c^2 + a^2 − b^2) / (2*c*a) 
-
-                    The 2s in the calculations are PART of the formula and thus
-                    they are not magic numbers.
-
-                    The getArea() method utilizes Heron's Formula for 
-                    calculating the area of a triangle.
-                    
-                    s = (a + b + c) / 2 <--- Half of the perimeter
-                    
-                    A = square root[s * (s - a) * (s - b) * (s - c)]
-                    
-                    The 2 used to get the half of the perimeter is not a magic
-                    number as it is a part of Heron's Formula.
+|                       1. setPoint1(double x, double y), no return
+|                       2. setPoint2(double x, double y), no return
+|                       3. setPoint3(double x, double y), no return
+|                       4. getPoint1X(), returns double
+|                       5. getPoint1Y(), returns double
+|                       6. getPoint2X(), returns double
+|                       7. getPoint2Y(), returns double
+|                       8. getPoint3X(), returns double
+|                       9. getPoint3Y(), returns double
+|                      10. getSide1(), returns double
+|                      11. getSide2(), returns double
+|                      12. getSide3(), returns double
+|                      13. getAngle1(), returns double
+|                      14. getAngle2(), returns double
+|                      15. getAngle3(), returns double
+|                      16. getPerimeter(), returns double
+|                      17. getArea(), returns double
+|                      18. isEquilateral, returns boolean
+|                      19. isRightAngled, returns boolean
+|
+| +-----------------------------------------------------------------------
+|   
+|   Formulas Used:
+|                   The methods getAngle1(), getAngle2(), and getAngle3()
+|                   all utilize the Law of Cosines to determine the angles.
+|
+|                   cos(C) = (a^2 + b^2 − c^2) / (2*a*b)
+|                   cos(A) = (b^2 + c^2 − a^2) / (2*b*c)
+|                   cos(B) = (c^2 + a^2 − b^2) / (2*c*a) 
+|
+|                   The 2s in the calculations are PART of the formula and thus
+|                   they are not magic numbers.
+|
+|                   The getArea() method utilizes Heron's Formula for 
+|                   calculating the area of a triangle.
+|                    
+|                   s = (a + b + c) / 2 <--- Half of the perimeter
+|                   
+|                   A = square root[s * (s - a) * (s - b) * (s - c)]
+|                   
+|                   The 2 used to get the half of the perimeter is not a magic
+|                   number as it is a part of Heron's Formula.
 |
 | *==========================================================================*/
 
@@ -308,15 +315,25 @@ public class Triangle
     /**
      * Method: getAngle1()
      * 
-     * Purpose: Gets angle 1 by utilizing the Law of Cosines formula and then
-     *          converting the radians to degrees.
+     * Purpose: Gets angle 1 by utilizing the Law of Cosines formula for angle 1 
+     *          and then converting the radians to degrees.
+     *				
+     *          cos(A) = (b^2 + c^2 − a^2) / (2*b*c) 
+     *
+     *          The 2s in the calculations are PART of the formula and thus
+     *          they are not magic numbers.
+     *
+     *		Source: 
+     *		https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html
      * 
      * @return angle 1 in degrees
      */
     public double getAngle1()
     {
         
-        /*This utilizes the Law of Cosines to find the angle. */
+        /*This utilizes the Law of Cosines formulas documented above 
+		to find the angle. */
+		
         double angle1 = Math.acos( (Math.pow(getSide2(), 2) 
                 + Math.pow(getSide3(), 2) - Math.pow(getSide1(), 2)) /
                 (2 * getSide2() * getSide3()) );
@@ -330,8 +347,16 @@ public class Triangle
     /**
      * Method: getAngle2()
      * 
-     * Purpose: Gets angle 2 by utilizing the Law of Cosines formula and then
-     *          converting the radians to degrees.
+     * Purpose: Gets angle 1 by utilizing the Law of Cosines formula 
+     *           for angle 2 and then converting the radians to degrees.
+     *				
+     *          cos(B) = (c^2 + a^2 − b^2) / (2*c*a) 
+     *
+     *          The 2s in the calculations are PART of the formula and thus
+     *          they are not magic numbers.
+     *
+     *		Source:
+     *		https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html
      * 
      * @return angle 2 in degrees
      */
@@ -352,9 +377,17 @@ public class Triangle
     /**
      * Method: getAngle3()
      * 
-     * Purpose: Gets angle 3 by utilizing the Law of Cosines formula and then
-     *          converting the radians to degrees.
-     * 
+     * Purpose: Gets angle 1 by utilizing the Law of Cosines formula
+     *          for angle 1 and then converting the radians to degrees.
+     *				
+     *	        cos(C) = (a^2 + b^2 − c^2) / (2*a*b)            
+     *
+     *          The 2s in the calculations are PART of the formula and thus
+     *          they are not magic numbers.
+     *
+     *		Source:
+     *		https://www.mathsisfun.com/algebra/trig-solving-sss-triangles.html
+     *
      * @return angle 3 in degrees
      */
     public double getAngle3()
@@ -375,7 +408,9 @@ public class Triangle
      * Method: getPerimeter()
      * 
      * Purpose: Adds the lengths of all sides of the triangle and gets the 
-     *          perimeter.
+     *          perimeter. It does this using the following formula:
+     *
+     *          Perimeter = SideA + SideB + SideC
      * 
      * @return perimeter of the triangle
      */
@@ -389,13 +424,21 @@ public class Triangle
     /**
      * Method: getArea()
      * 
-     * Purpose: Gets the area of the triangle by utilizing Heron's Formula.
+     * Purpose: Gets the area of the triangle by utilizing Heron's Formula:
+     *			
+     *          This gets half of the perimeter.
+     *          s = (a + b + c) / 2 
+     *         
+     *          A = square root[s * (s - a) * (s - b) * (s - c)]
+     *              
+     *          The 2 used to get the half of the perimeter is not a magic
+     *          number as it is a part of Heron's Formula.
      * 
      * @return area of the triangle.
      */
     public double getArea()
     {
-        /* Gets the half of the perimeter by dividing by 2 */
+        /* Gets the half of the perimeter by dividing by 2. */
         double halfOfPerimeter = getPerimeter() / 2;
         
         /* This utilizes Heron's Formula to find the area. */

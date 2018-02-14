@@ -1,13 +1,13 @@
 /*=============================================================================  
 |   Source code:  TriangleTester.java
-|        Author:  Nathan Pabon 
-|    Student ID:  5909334  
-|    Assignment:  Program # 2 Triangle
+|        Author:  
+|    Student ID:    
+|    Assignment:  Program # 2 - Triangle
 |  
-|        Course:  COP 3337 (Intermediate Programming) 
-|       Section:  U02 
-|    Instructor:  William Feild  
-|      Due Date:  7 February 2018, at the beginning of class
+|        Course:  COP 3337 (Programming II) 
+|       Section:  
+|    Instructor:    
+|      Due Date:  6 February 2018, at the beginning of class
 |
 |	I hereby certify that this collective work is my own
 |	and none of it is the work of any other person or entity.
@@ -39,7 +39,7 @@
 |      Process:  The program goes through the following steps:
 |                
 |                1. The user inputs the coordinates for each point and is 
-|                   prompted to imput a valid coordinate if they do not do so.
+|                   prompted to input a valid coordinate if they do not do so.
 |
 |                 2. Each pair of coordinates is passed as an argument to the
 |                   setPoint methods belonging to the Triangle class.
@@ -55,10 +55,10 @@
 |                All of the required features are in the program.
 |  
 |   Known Bugs:  There are no known bugs in the code.  
-
-    Note:
-            A more detailed explanation of how the methods function can be found
-            in the documentation of the Triangle class.
+|
+|   Note:
+|           A more detailed explanation of how the methods function can be found
+|           in the documentation of the Triangle class.
 |  *==========================================================================*/
 package triangle;
 
@@ -76,6 +76,10 @@ public class TriangleTester
         int counter = 1;
         double xCoordinate;
         double yCoordinate;
+		
+	int firstCoordinate = 1;
+	int secondCoordinate = 2;
+	int numberOfCoordinates = 3;
         
         Scanner scan = new Scanner(System.in);
         
@@ -107,13 +111,13 @@ public class TriangleTester
             
             yCoordinate = scan.nextDouble();
             
-            if (counter == 1)
+            if (counter == firstCoordinate)
             {
                 
                 triangle.setPoint1(xCoordinate, yCoordinate);
                 
             }
-            else if (counter == 2)
+            else if (counter == secondCoordinate)
             {
                 
                 triangle.setPoint2(xCoordinate, yCoordinate);
@@ -128,7 +132,7 @@ public class TriangleTester
         
             counter++;
         
-        }while(counter <= 3);
+        }while(counter <= numberOfCoordinates);
         
         printCoordinates();
         
@@ -180,9 +184,9 @@ public class TriangleTester
     private static void printSideLengths()
     {
        
-        System.out.printf("Side 1 Length: %.4f meters\n", triangle.getSide1());
-        System.out.printf("Side 2 Length: %.4f meters\n", triangle.getSide2());
-        System.out.printf("Side 3 Length: %.4f meters\n\n", triangle.getSide3());
+        System.out.printf("Side 1 Length: %.4f units\n", triangle.getSide1());
+        System.out.printf("Side 2 Length: %.4f units\n", triangle.getSide2());
+        System.out.printf("Side 3 Length: %.4f units\n\n", triangle.getSide3());
         
     }
     
@@ -214,7 +218,7 @@ public class TriangleTester
     private static void printPerimeter()
     {
         
-        System.out.printf("The perimeter of the triangle is %.4f meters\n", 
+        System.out.printf("The perimeter of the triangle is %.4f units\n", 
                 triangle.getPerimeter());
         
     }
@@ -230,7 +234,7 @@ public class TriangleTester
     private static void printArea()
     {
         
-        System.out.printf("The area of the triangle is %.4f square meters\n", 
+        System.out.printf("The area of the triangle is %.4f units squared\n",
                 triangle.getArea());
         
     }
