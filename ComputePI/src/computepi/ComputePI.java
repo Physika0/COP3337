@@ -70,12 +70,6 @@ package computepi;
 //Library imported for the abs() method to find the absolute value.
 import java.lang.Math;
 
-/**
- * This class has the main method which computes PI using the Leibniz formula.
- * It computes PI up to a certain level of accuracy.
- * @author Nathan Pabon
- * @version 1.0
- */
 public class ComputePI {
         
     public static void main(String[] args) {
