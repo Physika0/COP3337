@@ -1,12 +1,12 @@
 /*=============================================================================  
 |   Source code:  ComputePI.java
-|        Author:  Nathan Pabon 
-|    Student ID:  5909334  
+|        Author:   
+|    Student ID:  
 |    Assignment:  Program #1 Compute PI
 |  
 |        Course:  COP 3337 (Programming II)  
-|       Section:  U02  
-|    Instructor:  William Feild  
+|       Section:   
+|    Instructor:    
 |      Due Date:  25 January 2018, at the beginning of class
 |
 |	I hereby certify that this collective work is my own
