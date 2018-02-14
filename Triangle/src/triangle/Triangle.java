@@ -111,10 +111,6 @@ package triangle;
 /* Point2D class imported */
 import java.awt.geom.Point2D;
 
-/**
- *
- * @author npabon11
- */
 public class Triangle 
 {
     
