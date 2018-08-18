@@ -3,13 +3,13 @@
 |
 |         Class: BetterRectangle 
 |
-|        Author:  Nathan Pabon
-|    Student ID:  5909334
+|        Author:  
+|    Student ID:  
 |    Assignment:  Program #4 - Better Rectangle
 |  
 |        Course:  COP 3337 (Programming II)
-|       Section:  U02
-|    Instructor:  William Feild  
+|       Section:  
+|    Instructor:    
 |      Due Date:  8 March 2018, at the beginning of class
 |
 |	I hereby certify that this collective work is my own
